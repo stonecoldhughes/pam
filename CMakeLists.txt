@@ -28,6 +28,8 @@ add_library( pam_scitokens SHARED
               pam.c 
               parser.c 
               parser.h 
+              scitokens_verify.h
+              scitokens_verify.c
               strings.c
               strings.h )
 
