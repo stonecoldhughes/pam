@@ -76,3 +76,6 @@ include( FindCURL )
 target_link_libraries( pam_scitokens PUBLIC ${CURL_LIBRARIES} )
 
 target_include_directories( pam_scitokens PUBLIC ${CURL_INCLUDE_DIRS} )
+
+# add compile definitions
+add_compile_definitions( WITH_SCITOKENS )
