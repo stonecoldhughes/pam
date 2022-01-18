@@ -5,6 +5,7 @@
  * System includes.
  */
 #include <stdbool.h>
+#include <time.h>
 
 /*
  * Local includes.
