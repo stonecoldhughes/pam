@@ -4,12 +4,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <scitokens/scitokens.h>
 /*
  * Local includes.
  */
 #include "logger.h"
 #include "config.h"
+#include "scitokens.h"
 int scitoken_verify(const char * auth_line, const struct config * config, const char * scitoken_requested_user)
 {
     SciToken scitoken;

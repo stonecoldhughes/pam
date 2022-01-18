@@ -64,6 +64,12 @@ target_include_directories( pam_scitokens PUBLIC ${PAM_INCLUDE_DIR} )
 
 target_link_libraries( pam_scitokens PUBLIC ${PAM_LIBRARY} )
 
+# scitokens
+target_link_libraries( pam_scitokens PUBLIC /root_layer/scitokens-cpp/build/libSciTokens.so)
+
+target_include_directories( pam_scitokens PUBLIC /root_layer/scitokens-cpp/src )
+
+# openssl
 include( FindOpenSSL )
 
 target_link_libraries( pam_scitokens PUBLIC ${OPENSSL_LIBRARIES} )
@@ -77,5 +83,5 @@ target_link_libraries( pam_scitokens PUBLIC ${CURL_LIBRARIES} )
 
 target_include_directories( pam_scitokens PUBLIC ${CURL_INCLUDE_DIRS} )
 
-# add compile definitions
+# add compile definition to activate scitokens
 add_compile_definitions( WITH_SCITOKENS )
